@@ -1,0 +1,44 @@
+#spans{
+    font-size: 100px;
+}
+.nuevojuego,.desistir{
+    width: 302px;
+    height: 64px;
+    border-radius: 23px;
+}
+
+.nuevojuego:hover, .desistir:hover{
+    background-color: #1e1b40;
+    color: white;
+}
+.nuevojuego{
+    margin-right: 24px;
+    background-color: #090441;
+    color: white;
+}
+.desistir{
+    background-color: #E9ECFF;
+    color: #090441;
+    
+}
+.letras-contenedor{
+    display: inline-block;
+    margin-top: 27,5px;
+    margin-bottom: 22px;
+    font-family: 'Segoe UI';
+    font-size: 25px;
+}
+.pantalla{
+    display: inline-block;
+}
+canvas{
+    border: 1px solid black;
+    
+}
+body{
+    text-align: center;
+}
+
+.teclado{
+    border: none;
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0px;
+    background-color: #E9ECFF;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.log{
+    display: inline-block;
+}
+#logo{
+    margin: 20px 20px;
+}
+main{
+    text-align: center;
+}
+.container-principal{
+    display: inline-block;
+    margin-top: 150px;
+}
+.boton,.boton1{
+    font-style: 20px;
+    font-family:'segoe UI';
+    display: block;
+    width:320px ;
+    height: 76px;
+    text-align: center;
+    color: white;
+    background-color: #090441;
+    border-radius:95px ;
+}
+.boton{
+    margin-top: 31px;
+}
+.boton:hover,.boton1:hover{
+  
+    background-color: #1e1b40;
+   
+}
