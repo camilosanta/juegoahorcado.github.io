@@ -3,7 +3,7 @@ var pincel = pantalla.getContext("2d");
 var iniciar = document.querySelector(".nuevojuego").onclick = recargar;
 var desistir = document.querySelector(".desistir");
 
-var intentos = 0; 
+
 
 
   
@@ -15,17 +15,12 @@ var intentos = 0;
         return parseInt(inferior) + aleat
         }
 
-        var palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA'];
+        var palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA','CELULAR','LLUVIA','DISCORD','ALURA','PANAMA','HONDURAS','TECLADO','MAUSE','MONITOR','TORRE'];
         var palabraEscogida = palabras[aleatorio(0,palabras.length-1)] //
         var aciertos = [];
+    
 
-
-
-function reiniciando(){
-    intentos = 0;
-    recargar
-}
-
+        
  //--------------------------------------------------------------------------
  //lineas
 
@@ -182,6 +177,7 @@ var id = 0;
 
  //--------------------------------------------------------------------------
                   
+
 function dibujar(){
     
 
@@ -272,6 +268,14 @@ function dibujar(){
         pincel.fillText("Perdistes  :(",300,150)
         pincel.strokeText("Perdistes  :(",300,150)
       
+         lt1 = 1; 
+         lt2 = 1;
+         lt3 = 1; 
+         lt4 = 1; 
+         lt5 = 1;
+         lt6 = 1;
+         lt7 = 1; 
+         lt8 = 1; 
     }
  
 
