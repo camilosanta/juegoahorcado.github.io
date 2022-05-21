@@ -22,11 +22,13 @@
     
 }
 .letras-contenedor{
-    display: inline-block;
+    display: block;
     margin-top: 27,5px;
     margin-bottom: 22px;
     font-family: 'Segoe UI';
     font-size: 25px;
+
+    background-color: orangered;
 }
 .pantalla{
     display: inline-block;
@@ -41,4 +43,22 @@ body{
 
 .teclado{
     border: none;
+}
+.lista{
+    display: block;
+}
+.elemento-lista{
+    list-style: none;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    width: 25px;
+    margin-right: 2px;
+
+}
+.elmento-lista span{
+    color: white ;
+}
+#errores{
+    margin-bottom: 10px;
+    font-size:18px ;
 }

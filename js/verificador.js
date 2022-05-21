@@ -1,157 +1,47 @@
-var error1,error2,error3,error4,error5,error6,error7,error8 = true;
+var errores = document.querySelector('#errores')
 var pts = 0;
-var intentos = 0; 
-
- if (id == 3){
-
-
-    var gano = 1;
-    if(gano == 1){
-
-        var lt1 = 0; 
-        var lt2 = 0;
-        var lt3 = 0;  
-        addEventListener("keypress", function(e){
-    
-           
-            if(e.key == palabraEscogida.charAt(0)){
-                
-                if(lt1 == 0){
-                    dibujarletra(0,196);
-                    lt1 = 1;
-                    error1 = true;
-                }else{
-                    letraasignada();
-                }
-               
-            }else{
-                error1 = false;
-            }
-            if(e.key == palabraEscogida.charAt(1)){
-               
-                if(lt2 == 0){
-                    dibujarletra(1,230);
-                    lt2 = 1;
-                    error2 = true;
-                }else{
-                    letraasignada();
-                }
-            }
-            else{
-                error2 = false;
-            }
-            if(e.key == palabraEscogida.charAt(2)){
-                
-                if( lt3 == 0){
-                    dibujarletra(2,260);
-                    error3 = true;
-                    lt3 =1;
-                    
-                }else{
-                    letraasignada();
-                }
-            }
-            else{
-                error3 = false;
-            }
-    
-            if(error1 == false && error2 == false && error3 == false){
-                console.log(intentos +" " +e.key)
-                dibujar(e.key)
-            }
-            if(pts == 3){
-                ganastes();
-            }
-      })
-     }else{
-        alert("ganastes")
-    }
-
-    }
-   
-if (id == 4){
-
-
-        var gano = 1;
-        if(gano == 1){
-    
-            var lt1 = 0; 
-            var lt2 = 0;
-            var lt3 = 0;  
-            var lt4 = 0; 
-
+var repetida = false;
+var contadorCanvas = 200;
+var letrasUsadas = [];
         
-            addEventListener("keypress", function(e){
-        
-               
-                if(e.key == palabraEscogida.charAt(0)){
-                                
-                                
-                    if(lt1 == 0){
-                        console.log(palabraEscogida.charAt(0))
-                        dibujarletra(0,200)
-                        lt1 = 1;
-                        error1 = true;
-                    }else{
-                        letraasignada();
+addEventListener("keypress", function(e){
+
+            for(var i = 0; i < letrasUsadas.length ;i++){
+                if(mayuscula == letrasUsadas[i]){
+                    repetida = true;
+                    break;
+                }
+            }
+            if(repetida == false ){
+                letrasUsadas.push(e.key);
+                var considencias = false;
+
+                for(var i = 0 ; i < palabraEscogida.length; i++){
+                    if(mayuscula == palabraEscogida.charAt(i)){
+                     pts ++;
+                     considencias = true; 
+                     //hacer que la letra se muestre 
+                     if(pts == palabraEscogida.length){
+                        ganastes();
                     }
-                   
-                }else{
-                    error1 = false;
-                }
-                if(e.key == palabraEscogida.charAt(1)){
-                   
-                    if(lt2 == 0){
-                        dibujarletra(1,230)
-                        lt2 = 1;
-                        error2 = true;
-                    }else{
-                        letraasignada();
-                    }
-                }
-                else{
-                    error2 = false;
-                }
-                if(e.key == palabraEscogida.charAt(2)){
                     
-                    if( lt3 == 0){
-                        dibujarletra(2,260)
-                        error3 = true;
-                        lt3 =1;
-                    }else{
-                        letraasignada();
                     }
+                       
                 }
-                else{
-                    error3 = false;
-                }
+                if(considencias ==  false){
+                    intentos ++;
+                    dibujar()
+                    errores.innerHTML +=" " + mayuscula;
+        
+                }   
+
                 
-                if(e.key == palabraEscogida.charAt(3)){
-                    
-                    if( lt4 == 0){
-                        dibujarletra(3,290)
-                        error4 = true;
-                        lt4 =1;
-                    }else{
-                        letraasignada();
-                    }
-                }
-                else{
-                    error4 = false;
-                }
-                if(error1 == false && error2 == false && error3 == false && error4 == false ){
-                    
-                    console.log(intentos +" " +e.key)
-                    dibujar(e.key)
-                }
-                if(pts == 4){
-                    alert("gano")
-        
-                    ganastes();
-                }
-          })
-         }else{
-            alert("ganastes")
-        }
-    
-        }
+            }
+                
+            });
+            /* 1 hacer el array 
+                2 analizar que la tecla que ingreso el usuario no este dentro del array
+                3 verificar si la letra esta duplicada
+                3.1 si esta duplicada no ejecuta nada
+                3.2 ejecutar la condicion de plabra escogida
+                3.2.1 hacer una iteracion for o wile i posicion 0 avanza 3 letras   */

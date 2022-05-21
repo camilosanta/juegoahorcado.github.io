@@ -1,4 +1,4 @@
-
+var mayuscula;
   addEventListener("keypress", function(e){
     
 //--------------------------------------------------------------------------------------------------------------- 
@@ -23,7 +23,8 @@
             alert("caracter especial");
         }
         if(cumple == true){
-            alert("caracter en minuscula");
+             mayuscula = e.key.toUpperCase(); //pone en mayusculas
+            console.log(mayuscula)
         }
         if(cumple4 == true){
             alert("caracter numerico");
