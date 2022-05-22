@@ -3,43 +3,53 @@ var pts = 0;
 var repetida = false;
 var contadorCanvas = 200;
 var letrasUsadas = [];
-        
-addEventListener("keypress", function(e){
 
-            for(var i = 0; i < letrasUsadas.length ;i++){
-                if(mayuscula == letrasUsadas[i]){
-                    repetida = true;
-                    break;
-                }
+function verificador(){
+
+    console.log(palabraEscogida)
+    repetida = false;
+    var spans2 = document.querySelectorAll('.letras')
+    console.log(spans2)
+    for(var i = 0; i < letrasUsadas.length ;i++){
+        if(mayuscula == letrasUsadas[i]){
+            repetida = true;
+            break;
+        }
+    }
+    if(repetida == false ){
+        letrasUsadas.push(mayuscula);
+        var considencias = false;
+
+        for(var i = 0 ; i < palabraEscogida.length; i++){
+            if(mayuscula == palabraEscogida.charAt(i)){
+             pts ++;
+             considencias = true; 
+
+           
+             spans2[i].classList.remove('hidden');
+
+             if(pts == palabraEscogida.length){
+                ganastes();
+                removeEventListener("keypress",verificador)
             }
-            if(repetida == false ){
-                letrasUsadas.push(e.key);
-                var considencias = false;
-
-                for(var i = 0 ; i < palabraEscogida.length; i++){
-                    if(mayuscula == palabraEscogida.charAt(i)){
-                     pts ++;
-                     considencias = true; 
-                     //hacer que la letra se muestre 
-                     if(pts == palabraEscogida.length){
-                        ganastes();
-                    }
-                    
-                    }
-                       
-                }
-                if(considencias ==  false){
-                    intentos ++;
-                    dibujar()
-                    errores.innerHTML +=" " + mayuscula;
-        
-                }   
-
-                
+            
             }
-                
-            });
-            /* 1 hacer el array 
+               
+        }
+        if(considencias ==  false){
+            intentos ++;
+            dibujar()
+            errores.innerHTML +=" " + mayuscula;
+
+        }   
+
+        
+    }
+}
+        
+addEventListener("keypress",verificador);
+
+   /* 1 hacer el array 
                 2 analizar que la tecla que ingreso el usuario no este dentro del array
                 3 verificar si la letra esta duplicada
                 3.1 si esta duplicada no ejecuta nada

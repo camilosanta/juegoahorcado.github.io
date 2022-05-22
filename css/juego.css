@@ -1,3 +1,15 @@
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
 #spans{
     font-size: 100px;
 }
@@ -53,6 +65,7 @@ body{
     border-bottom: 1px solid black;
     width: 25px;
     margin-right: 2px;
+    height: 35px;
 
 }
 .elmento-lista span{
@@ -61,4 +74,9 @@ body{
 #errores{
     margin-bottom: 10px;
     font-size:18px ;
+}
+
+/*oculta elementos o letras*/
+.hidden{
+    display: none;
 }

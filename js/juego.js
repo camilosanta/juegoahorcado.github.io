@@ -5,8 +5,6 @@ var desistir = document.querySelector(".desistir");
 var lista = document.querySelector('#lista')
 var intentos = 0;
 
-
-
   
 
     function aleatorio(inferior,superior){
@@ -16,7 +14,7 @@ var intentos = 0;
         return parseInt(inferior) + aleat
         }
 
-        var palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA','CELULAR','LLUVIA','DISCORD','ALURA','PANAMA','HONDURAS','TECLADO','MAUSE','MONITOR','TORRE','CLASES','NIÑO'];
+        var palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA','CELULAR','LLUVIA','DISCORD','ALURA','PANAMA','HONDURAS','TECLADO','MAUSE','MONITOR','TORRE','CLASES'];
         var palabraEscogida = palabras[aleatorio(0,palabras.length-1)] //
         var aciertos = [];
     
@@ -29,7 +27,8 @@ var intentos = 0;
                 
                 var span = document.createElement('span');
                 span.textContent = palabraEscogida.charAt(i);
-
+                span.classList.add('hidden')
+                span.classList.add('letras')
                 lista.appendChild(li);
                 li.appendChild(span);
         }
@@ -39,7 +38,6 @@ var intentos = 0;
 
                   
  function dibujar(){
-        intentos ++
       
         if(intentos == 1){
            
@@ -122,16 +120,13 @@ var intentos = 0;
             pincel.font ="30px Arial";
             pincel.fillText("Perdistes  :(",300,150)
             pincel.strokeText("Perdistes  :(",300,150)
+            removeEventListener("keypress",verificador);
+            alert(palabraEscogida)
            
         }
  
 
-    function dibujarletraincorrecta(caracter,x){
-
-            pincel.fillStyle ="darkblue";
-            pincel.font ="30px Arial";
-            pincel.fillText(caracter,x,340);
-    }
+ 
 }
 function recargar(){
     location.reload(); //recarga pagina
@@ -143,29 +138,6 @@ function ganastes(){
     pincel.font ="30px Arial";
     pincel.fillText("Ganastes,Felicidades",300,150)
     pincel.strokeText("Ganastes,Felicidades",300,150)
-    error1,error2,error3,error4,error5,error6,error7,error8 = true;
     gano= 0;
 
 }
-function dibujarlineas(y,x,y2,x2){
-
-    pincel.fillStyle = "cian";
-    pincel.beginPath();       
-    pincel.moveTo(y,x);
-    pincel.fillRect(y2,x2,25,4)
-}
-function dibujarletra(caracter,x,y){
-    console.log(palabraEscogida.charAt(caracter))
-    pts = pts + 1;
-    pincel.fillStyle ="darkblue";
-    pincel.font ="30px Arial";
-    pincel.fillText(palabraEscogida.charAt(caracter),x,300)
-    for(var i = 0 ; i < palabraEscogida.length; i++){
-                palabraEscogida.charAt(i)
-                dibujarletra(i,contadorCanvas);
-                contadorCanvas = contadorCanvas + 30;
-
-    }
-           
-}
-

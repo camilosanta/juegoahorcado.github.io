@@ -24,11 +24,14 @@ var mayuscula;
         }
         if(cumple == true){
              mayuscula = e.key.toUpperCase(); //pone en mayusculas
-            console.log(mayuscula)
+             console.log(mayuscula);
         }
         if(cumple4 == true){
             alert("caracter numerico");
         }
+    }else{
+        mayuscula = e.key.toUpperCase(); //pone en mayusculas
+        console.log(mayuscula);
     }
 
   })
