@@ -18,20 +18,25 @@ var mayuscula;
     if(cumple == true || cumple2 == true || cumple3 == true || cumple4 == true){
         if(cumple2 == true){
             alert("Palabra con acento");
+            pasa = false;
         }
         if(cumple3 == true){
             alert("caracter especial");
+            pasa = false;
         }
         if(cumple == true){
              mayuscula = e.key.toUpperCase(); //pone en mayusculas
              console.log(mayuscula);
+             pasa = false;
         }
         if(cumple4 == true){
             alert("caracter numerico");
+            pasa = false;
         }
     }else{
         mayuscula = e.key.toUpperCase(); //pone en mayusculas
         console.log(mayuscula);
+        pasa = false;
     }
 
   })

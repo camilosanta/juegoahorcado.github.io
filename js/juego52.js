@@ -1,16 +1,26 @@
 var guardarPalabra = document.querySelector("#guardar");
-var campotexto = document.querySelector('.input')
-
-
-
+var campotexto = document.querySelector('#agregar-plabre-input')
+var pasa = true;
 guardarPalabra.addEventListener("click",function(e){
     e.preventDefault()
-    var input = campotexto.value 
-    palabras.push(input)
-    console.log(palabras)
 
+    
+   if(pasa == true){
+
+    var form = campotexto.value
+    var textoguardar = form
+    palabras.push(textoguardar)
+
+
+    console.log(palabras)
 
     PantallaAgregarPalabraSitio.classList.add('ocultar')
     PantallaJuego.classList.remove('ocultar')
+    campotexto.value=""
+    recargar()
+   }else{
+       alert("error")
+   }
+  
     
 })

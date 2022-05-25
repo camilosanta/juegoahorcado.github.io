@@ -146,7 +146,8 @@ function recargar(){
 if(pasa == false){
 
 
-    palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA','CELULAR','LLUVIA','DISCORD','ALURA','PANAMA','HONDURAS','TECLADO','MAUSE','MONITOR','TORRE','CLASES'];
+
+   
     palabraEscogida = palabras[aleatorio(0,palabras.length-1)] //
     aciertos = [];
     console.log(palabras)

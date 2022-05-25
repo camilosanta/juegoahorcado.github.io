@@ -8,6 +8,7 @@ var iniciarMenujuego = document.querySelector('.boton2').onclick = iniciarjuego;
 var desistir = document.querySelector('.desistir').onclick = rendirce;
 var agregarBotonPalabra = document.querySelector('.boton3').onclick = seccionagregarPalabra2;
 var botoninformacion = document.querySelector('.informacion-boton').onclick =informacion3;
+
 var logoprincipal = document.querySelector('.log')
 
 
@@ -41,6 +42,7 @@ function rendirce(){
 function seccionagregarPalabra2(){
     PantallaAgregarPalabraSitio.classList.remove('ocultar')
     PantallaAgregarPalabra.classList.add('ocultar')
+    removeEventListener("keypress",verificador);
 }
 
 function informacion3(){
