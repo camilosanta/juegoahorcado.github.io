@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Ahorcado-Menu-Principal</title>
     <link rel="icon" href="img/icon/Vector.ico" type="imge/x-icon">
     <link rel="stylesheet" href="css/index-iniciar.css">
+    <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" href="css/palabras.css">
     
 </head>
 <body>
@@ -16,9 +20,109 @@
     </div>
     <main>
         <div class="container-principal">
-            <a href="index-iniciar.html"><button class="boton1">Iniciar</button></a>
-            <a href="index-ifo.html"><button class="boton">Informacion</button></a>
+            <button class="boton1">Iniciar</button>
+            <button class="informacion-boton">Informacion</button>
         </div>
-    </main>
+
+
+        <div class="juego">
+            <div class="log">
+                <img src="img/Vector.jpg" id="logo">
+                <button class="devolver"><a href="index.html"><span class="material-symbols-outlined"> logout </span></a></button>
+                
+            </div>
+                <div class="pantalla">
+                   
+                    <canvas width="600" height="350">
+                            
+                    </canvas>
+                </div>
+            <setion>
     
+                <section class="letras-contenedor" id="letras-correctas">           
+                        <ul class="lista" id ="lista">
+            
+                        </ul>
+                 </section>
+                 
+             
+                 <section class="le+tras-contenedor" id="errores">
+                        
+                 </section>
+           
+                <section class="controls">
+                    <button class="nuevojuego">Nuevo Juego</button>
+                   <button class="desistir">Desistir</button> 
+                </section>
+           
+            </setion>
+            <button class="devolver2"><span class="material-symbols-outlined"> volume_up</span> </button>
+        </div>
+
+        <div class="agregar-palabras">
+            <div class="log">
+                <img src="img/Vector.jpg" id="logo">
+                <button class="devolver"><a href="index.html"><span class="material-symbols-outlined"> logout </span></a></button>
+            </div>
+           
+            <main>
+                <div class="container-principal">
+                    <button class="boton2">Iniciar</button>
+                 <button class="boton3">Agregar una nueva palabra</button>
+                    
+                 
+                </div>
+            </main>
+        </div>
+
+        <div class="sitio-agregar-palabras">
+
+            <div class="log">
+                <img src="img/Vector.jpg" id="logo">
+                <button class="devolver"><a href="index.html"><span class="material-symbols-outlined" > logout </span></a></button>
+                
+            </div>
+            <section class="cajoneraboton">
+         
+               <div class="input">
+                    <input type="text" id="agregar-plabre-input"  class="input" placeholder="Ingresa Una Palabra" >
+         
+                   
+               </div>
+                <div class="botones">
+                     <button type="button" class="boton-enviar" id="guardar">Guardar</button>
+                     <button class="boton-enviar"> Cancelar</button>
+                </div>
+            </section>
+        
+        </div>
+
+        <div class="informacione3">
+            <div class="log">
+                <img src="img/Vector.jpg" id="logo">
+                <button class="devolver"><a href="index.html"><span class="material-symbols-outlined"> logout </span></a></button>
+            </div>
+           
+            <div>
+                <div class="info">
+                    <p>Este Juego esta en la vercion beta</p>
+                    <p>Creado por: Juan Camilo Santacruz Guzman</p>
+                    <p>Correo : santacruz13578@gmail.com</p>
+                    <p>Colombia - 2022</p>
+        
+                    <a href="https://www.linkedin.com/in/juan-camilo-3835501ab/"><img src="img/linkeding.png" alt="icono" width="40px"></a>
+                    <samp><a href="https://github.com/camilosanta"><img src="img/github.png" alt="icono" width="32px"></a></samp>
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+    <script src="js/ocultar.js"></script>
+    <script src="js/arreglo.js"></script>
+    <script src="js/expreciones.js"></script>
+    <script src="js/verificador.js"></script>
+    <script src="js/juego.js"></script>
+    <script src="js/juego52.js"></script>
+</body>
 </html>

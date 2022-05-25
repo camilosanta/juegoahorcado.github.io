@@ -3,6 +3,7 @@ var pts = 0;
 var repetida = false;
 var contadorCanvas = 200;
 var letrasUsadas = [];
+var considencias = false;
 
 function verificador(){
 
@@ -18,20 +19,20 @@ function verificador(){
     }
     if(repetida == false ){
         letrasUsadas.push(mayuscula);
-        var considencias = false;
+            considencias = false;
 
         for(var i = 0 ; i < palabraEscogida.length; i++){
             if(mayuscula == palabraEscogida.charAt(i)){
              pts ++;
              considencias = true; 
 
-           
+                dibujar()
              spans2[i].classList.remove('hidden');
 
              if(pts == palabraEscogida.length){
                 ganastes();
                 removeEventListener("keypress",verificador)
-            }
+            }   
             
             }
                

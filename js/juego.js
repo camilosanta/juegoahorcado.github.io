@@ -4,16 +4,16 @@ var iniciar = document.querySelector(".nuevojuego").onclick = recargar;
 var desistir = document.querySelector(".desistir");
 var lista = document.querySelector('#lista')
 var intentos = 0;
-
-
+var li ;
+var span;
         crearPalabra();
         function crearPalabra(){
             for(var i = 0 ; i < palabraEscogida.length; i++){
                 
-                var li = document.createElement('li')
+                li = document.createElement('li')
                 li.classList.add('elemento-lista')
                 
-                var span = document.createElement('span');
+                span = document.createElement('span');
                 span.textContent = palabraEscogida.charAt(i);
                 span.classList.add('hidden')
                 span.classList.add('letras')
@@ -21,11 +21,12 @@ var intentos = 0;
                 li.appendChild(span);
         }
         }
-        
-
+    
 
                   
  function dibujar(){
+
+    
       
         if(intentos == 1){
            
@@ -117,17 +118,51 @@ var intentos = 0;
  
 }
 function recargar(){
-    location.reload(); //recarga pagina
+    var pasa = true;
+    intentos = 0;
+    pts = 0;
+
+    if(intentos == 0){
+        pincel.fillStyle ="#E9ECFF";
+        pincel.fillRect(0,0,700,500);
+        palabraEscogida.textContent=""
+
+        contadorCanvas = 200;
+          
+        }
+
+ if(pasa == true){
+        
+        palabraEscogida.textContent=""
+        lista.textContent = ""
+        li.textContent=""
+        pasa = false
+        li.classList.remove('elemento-lista')
+        span.classList.remove('letras')
+        errores.textContent =""
+        letrasUsadas= []
+        
+}
+if(pasa == false){
+
+
+    palabras = ['JAVA', 'HTML', 'MEXICO', 'COLOMBIA', 'WEB', 'ECUADOR', 'PERU', 'BRAZIL', 'AMERICA','CELULAR','LLUVIA','DISCORD','ALURA','PANAMA','HONDURAS','TECLADO','MAUSE','MONITOR','TORRE','CLASES'];
+    palabraEscogida = palabras[aleatorio(0,palabras.length-1)] //
+    aciertos = [];
+    console.log(palabras)
+    crearPalabra();
+   
+    addEventListener("keypress",verificador);
+}
+       
 }
 function ganastes(){
     alert("gano")
-    
+   
     pincel.fillStyle = "cyan";
     pincel.font ="30px Arial";
     pincel.fillText("Ganastes,Felicidades",300,150)
     pincel.strokeText("Ganastes,Felicidades",300,150)
     gano= 0;
-
+    pasa = true
 }
-
-

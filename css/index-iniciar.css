@@ -48,7 +48,7 @@ main{
     display: inline-block;
     margin-top: 150px;
 }
-.boton1{
+.boton1,.boton2{
     font-style: 20px;
     font-family:'segoe UI';
     display: block;
@@ -59,7 +59,7 @@ main{
     background-color: #090441;
     border-radius:95px ;
 }
-.boton{
+.boton,.boton3,.informacion-boton{
     margin-top: 31px;
     font-style: 20px;
     font-family:'segoe UI';
@@ -85,4 +85,9 @@ main{
 .info img {
     text-decoration: none;
     margin: 20px;
+}
+
+
+.ocultar{
+    display: none;
 }
