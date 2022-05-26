@@ -43,6 +43,7 @@ function seccionagregarPalabra2(){
     PantallaAgregarPalabraSitio.classList.remove('ocultar')
     PantallaAgregarPalabra.classList.add('ocultar')
     removeEventListener("keypress",verificador);
+  
 }
 
 function informacion3(){

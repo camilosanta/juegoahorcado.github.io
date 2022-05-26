@@ -36,7 +36,7 @@ var mayuscula;
     }else{
         mayuscula = e.key.toUpperCase(); //pone en mayusculas
         console.log(mayuscula);
-        pasa = false;
+        pasa = true;
     }
 
   })

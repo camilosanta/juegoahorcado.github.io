@@ -111,7 +111,7 @@ var span;
             pincel.strokeText("Perdiste :(",300,150)
             removeEventListener("keypress",verificador);
             alert(palabraEscogida)
-           
+            pasa = true;
         }
  
 
@@ -165,5 +165,5 @@ function ganastes(){
     pincel.fillText("Ganaste,Felicidades",300,150)
     pincel.strokeText("Ganaste,Felicidades",300,150)
     gano= 0;
-    pasa = true
+    pasa = true;
 }
