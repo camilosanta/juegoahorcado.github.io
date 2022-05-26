@@ -107,8 +107,8 @@ var span;
             //texto de perdedor 
             pincel.fillStyle = "cyan";
             pincel.font ="30px Arial";
-            pincel.fillText("Perdistes  :(",300,150)
-            pincel.strokeText("Perdistes  :(",300,150)
+            pincel.fillText("Perdiste :(",300,150)
+            pincel.strokeText("Perdiste :(",300,150)
             removeEventListener("keypress",verificador);
             alert(palabraEscogida)
            
@@ -162,8 +162,8 @@ function ganastes(){
    
     pincel.fillStyle = "cyan";
     pincel.font ="30px Arial";
-    pincel.fillText("Ganastes,Felicidades",300,150)
-    pincel.strokeText("Ganastes,Felicidades",300,150)
+    pincel.fillText("Ganaste,Felicidades",300,150)
+    pincel.strokeText("Ganaste,Felicidades",300,150)
     gano= 0;
     pasa = true
 }
