@@ -18,7 +18,8 @@ guardarPalabra.addEventListener("click",function(e){
     PantallaJuego.classList.remove('ocultar')
     campotexto.value=""
     recargar()
-   }else{
+   }
+   if(pasa == false){
        alert("error")
    }
   
